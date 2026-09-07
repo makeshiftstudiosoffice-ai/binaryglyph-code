@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador BinaryGlyph Code</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
+        textarea { width: 80%; height: 100px; padding: 10px; border-radius: 8px; border: none; font-size: 16px; }
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            background: #1e1e1e;
+            border: 2px solid cyan;
+            color: #00ff00;
+            font-family: monospace;
+            font-size: 30px;
+            word-wrap: break-word;
+            min-height: 50px;
+            display: inline-block;
+            max-width: 90%;
+        }
+        h1 { color: cyan; }
+        .hint { color: #888; font-size: 12px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>BinaryGlyph Generator</h1>
+    <p>Digite o texto abaixo para gerar a etiqueta e ler com o celular:</p>
+    <textarea id="input" placeholder="Ex: Endereço: Rua João Batista 345">Nome: [NOME], CPF: 000.000.000-00, Endereço: [RUA/NÚMERO], Item: [PRODUTO]</textarea>
+    <br>
+    <div id="output"></div>
+    <p class="hint">Aponte a câmera do seu celular para o quadro verde acima.</p>
+
+    <script>
+        const tabela = {
+            'A': "♔", 'B': "♕", 'C': "♖", 'D': "♗", 'E': "♘", 'F': "♙", 'G': "♚", 'H': "♛", 'I': "♜",
+            'J': "♝", 'K': "♞", 'L': "♟", 'M': "⚡", 'N': "☀", 'O': "☁", 'P': "☂", 'Q': "☃", 'R': "☄",
+            'S': "★", 'T': "☆", 'U': "☎", 'V': "☏", 'W': "✈", 'X': "✉", 'Y': "✏", 'Z': "⚓",
+            'a': "♠", 'b': "♣", 'c': "♥", 'd': "♦", 'e': "♩", 'f': "♪", 'g': "♫", 'h': "♬", 'i': "⛏",
+            'j': "⚒", 'k': "⚔", 'l': "⚖", 'm': "⚙", 'n': "⚗", 'o': "⚰", 'p': "⚱", 'q': "⚲", 'r': "⚳",
+            's': "⚴", 't': "⚵", 'u': "⚶", 'v': "⚷", 'w': "⚸", 'x': "⚛", 'y': "⚜", 'z': "⚝",
+            '0': "⚀", '1': "⚁", '2': "⚂", '3': "⚃", '4': "⚄", '5': "⚅", '6': "⚆", '7': "⚇", '8': "⚈", '9': "⚉",
+            ' ': "░", ',': "⁕", '.': "✦", ':': "⁚", '-': "—", '\n': "\n"
+        };
+
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+
+        function update() {
+            const text = input.value;
+            let res = "";
+            for (let char of text) {
+                res += tabela[char] || "";
+            }
+            output.innerText = res;
+        }
+
+        input.addEventListener('input', update);
+        update();
+    </script>
+</body>
+</html>
