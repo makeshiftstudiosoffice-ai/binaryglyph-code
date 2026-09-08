@@ -1,3 +1,7 @@
+<img width="1080" height="2400" alt="28022" src="https://github.com/user-attachments/assets/ee0b3ed4-8548-437e-8287-a219d372b141" />
+<img width="1080" height="2400" alt="28040" src="https://github.com/user-attachments/assets/f39c5659-b691-42bf-9528-c185a8b37d3f" />
+<img width="2000" height="1200" alt="28037" src="https://github.com/user-attachments/assets/fc52090f-c6c1-423e-a3b2-84a82150a8bc" />
+<img width="1080" height="2400" alt="28038" src="https://github.com/user-attachments/assets/3340f1f5-0a05-4fb6-bb51-dac0be35e030" />
 # BinaryGlyph Code — Privacy in the Last-Mile Logistics 📦🔒
 
 [Português]
